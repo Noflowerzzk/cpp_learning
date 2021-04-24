@@ -138,10 +138,40 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="D:\用户目录\我的文档\Visual Studio 2019\标头.h" />
+    <ClInclude Include="homework1.h" />
+    <ClInclude Include="homework10.h" />
+    <ClInclude Include="homework2.h" />
+    <ClInclude Include="homework3.h" />
+    <ClInclude Include="homework4.h" />
+    <ClInclude Include="homework5.h" />
+    <ClInclude Include="homework6.h" />
+    <ClInclude Include="homework7.h" />
+    <ClInclude Include="homework8.h" />
+    <ClInclude Include="homework9.h" />
+    <ClInclude Include="标头.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\用户目录\我的文档\Visual Studio 2019\c++学习.cpp" />
+    <None Include="..\..\..\Desktop\Crossfire - Character Design\Crossfire - Character Design\crossfire_VVIP.fbx" />
+    <None Include="..\..\..\Desktop\张桢锴的文件\可爱黑红系女法师全套动画\fs.FBX" />
+    <None Include="a2\A2.FBX" />
+    <None Include="D:\360安全浏览器下载\微妙网-333.fbx" />
+    <None Include="HAHA.html" />
+    <None Include="HTML学习.html">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="HTML脚本.html">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="jquery-1.4.2.min.js" />
+    <None Include="njs.FBX" />
+    <None Include="分解质因数.html" />
+    <None Include="贪吃蛇.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="c++学习.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

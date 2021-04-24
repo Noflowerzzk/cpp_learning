@@ -1,0 +1,116 @@
+<style>
+
+    .box {
+        width: 60px;
+        height: 60px;
+        background-color: red;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 60px;
+    }
+
+    .head {
+        background-color: yellowgreen;
+    }
+    #food {
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        background: greenyellow;
+    }
+</style>
+<HTML>
+<HEAD>
+    <META NAME="GENERATOR" Content="Microsoft Visual Studio">
+    <TITLE></TITLE>
+</HEAD>
+<BODY>
+    <div id="content">
+        <div id="snake">
+            <div class="box head"></div>
+            <div class="box"></div>
+
+        </div>
+
+    </div>
+    <div id="food">
+
+    </div>
+
+    <script>
+        var boxs = document.querySelectorAll(".box");
+        var snake_x = 0;
+        var snake_y = 0;
+        var turn = "right";
+        var fd = document.getElementById("food");
+        fd.style.left = Math.random() * snake_x_max + "px";
+        fd.style.top = Math.random() * snake_y_max + "px";
+        setInterval(function () {
+            snakeMove();
+        }, 100)
+        function snakeMove() {
+            switch (turn) {
+                case "right": snake_x += 60; break;
+                case "left": snake_x -= 60; break;
+                case "top": snake_y -= 60; break;
+                case "bottom": snake_y += 60; break;
+            }
+
+            for (var i = boxs.length - 1; i > 0; i--) {
+                boxs[i].style.left = boxs[i - 1].style.left;
+                boxs[i].style.top = boxs[i - 1].style.top;
+
+            }
+            boxs[i].style.left = snake_x + "px";
+            boxs[i].style.top = snake_y + "px";
+
+        }
+        document.onkeydown = function (evt) {
+            var e = evt || event;
+            var keyCode = e.keyCode || e.which;
+            switch (keyCode) {
+                case 37: turn = "left"; break;
+                case 38: turn = "top"; break;
+                case 39: turn = "right"; break;
+                case 40: turn = "bottom"; break;
+            }
+        }
+        for (var i = boxs.length - 1; i > 0; i--) {
+            boxs[i].style.left = boxs[i - 1].style.left;
+            boxs[i].style.top = boxs[i - 1].style.top;
+
+        }
+        boxs[i].style.left = snake_x + "px";
+        boxs[i].style.top = snake_y + "px";
+        var snake_x_max = document.documentElement.clientWidth;
+        var snake_y_max = document.documentElement.clientHeight;
+        if (snake_x > snake_x_max) {
+            snake_x = 0;
+        }
+        if (snake_x < 0) {
+            snake_x = snake_x_max;
+        }
+        if (snake_y > snake_y_max) {
+            snake_y = 0;
+        }
+        if (snake_y < 0) {
+            snake_y = snake_y_max;
+        }
+        var dl = snake_x;
+        var dt = snake_y;
+        var fl = fd.style.left;
+        var ft = fd.style.top;
+        var dv = document.querySelectorAll("#snake div");
+        var sk = document.getElementById("snake");
+        var a2 = Number(fl.substring(0, fl.indexOf("px")));
+        var b2 = Number(ft.substring(0, ft.indexOf("px")));
+        if (Math.abs(dl - a2) <= 60 && Math.abs(dt - b2) <= 60) {
+            fd.style.left = Math.random() * 1000 + "px";
+            fd.style.top = Math.random() * 800 + "px";
+            sk.appendChild(dv[1].cloneNode());
+            boxs = document.querySelectorAll(".box");
+        }
+    </script>
+</BODY>
+</HTML>

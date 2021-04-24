@@ -1,0 +1,89 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        �����Ů������2 ˫��547��
+        ��547����˫��547��
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/top.css" />
+    <link href="http://mm2.kuwan8.com/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="Generator" content="Z" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+    <script>document.domain = 'kuwan8.com'; var serverInfo = {}; serverInfo.id = "547"; serverInfo.name = "��547����˫��547��";serverInfo.username="D726E133-0A95-4841-9CC0-E993DD89061C"</script>
+
+    <script language="javascript">
+        function AddFavorite(sURL, sTitle) {
+            try {
+                window.external.addFavorite(sURL, sTitle);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(sTitle, sURL, "");
+                } catch (e) {
+                    alert("�����ղ�ʧ�ܣ���ʹ��Ctrl+D�������");
+                }
+            }
+        }
+        function getCookie(cookie_name) {
+            var results = document.cookie.match('(^|;) ?' + cookie_name + '=([^;]*)(;|$)');
+            if (results)
+                return (unescape(results[2]));
+            else
+                return null;
+        }
+        function addFavorite() {
+
+            try {
+                window.external.addFavorite('http://mm2.kuwan8.com/', '������ɡ�KuWan8.com - Ů������2');
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel('������ɡ�KuWan8.com - Ů������2', 'http://mm2.kuwan8.com/', "");
+                } catch (e) {
+                    alert("�����ղ�ʧ�ܣ���ʹ��Ctrl+D�������");
+                }
+            }
+        }
+        function shouchan() {
+            if (getCookie("type") != "mm2.kuwan8.com") {
+                var question = confirm("����'ȷ��'���ղر�վ,��½��Ϸ������.");
+                if (question != "0") {
+                    addFavorite();
+                    //��ȡ��ǰʱ��
+                    var date = new Date();
+                    var expireDays = 10;
+                    //��date����Ϊ10���Ժ��ʱ��
+                    date.setTime(date.getTime() + expireDays * 24 * 3600 * 3000);
+                    //��userId��userName����cookie����Ϊ10������
+                    document.cookie = "type=mm2.kuwan8.com; expires=" + date.toGMTString();
+                }
+            }
+        }
+        window.onbeforeunload = function() {
+            shouchan();
+        }
+
+//alert("��Ϸ����ά��������������棡");
+//        window.location.href = "http://mm2.kuwan8.com/";
+    </script>
+
+
+
+</head>
+<frameset rows="*" cols="*" border="0" framespacing="0" id="bodyFrame" name="bodyFrame">
+
+
+    <frameset rows="*" cols="0, 24, *" border="0" framespacing="0" name="bodyFrame" id="frame-body">
+        <frame src="left.aspx?ID=547" frameborder="0" scrolling="no" style="background:#000">
+        <frame src="scoller.html?" frameborder="0" framespacing="0" scrolling="no" style="background:#000" />
+        <frame src="gotogame_R.aspx?gid=38&zid=547" frameborder="0" framespacing="0">
+    </frameset>
+
+</frameset>
+<noframes>
+</noframes>
+</html>

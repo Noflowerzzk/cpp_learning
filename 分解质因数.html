@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+    <input id="demo" type="text" />
+    <button type="button" onclick="prime()">测试</button>
+    <script>
+        function prime() {
+            var x = document.getElementById("demo").value;
+            var text1;
+            var time = today.getSeconds();
+            if (isNaN(x) || x < 1)
+                alert("请输入正确的数字");
+            else if (x == 1)
+                text1 = "既不是质数，也不是合数";
+            //var a = 2;
+
+            time = today.getSeconds() - time;
+            time = checkTime(time);
+            document.getElementById("ww").innerHTML = time;
+            document.getElementById("w").innerHTML = text1;
+        }
+    </script>
+    <p>用时</p>
+    <p id="ww">a</p>
+    <!--<p id="w"></p>-->
+
+</BODY>
+</HTML>
